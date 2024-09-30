@@ -1,0 +1,16 @@
+<header>
+<ul class="nav nav-tabs ">
+  <li class="nav-item">
+    <a class="nav-link {% if request.path == '/' %} active {% endif %}" href="/">Главная</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link {% if request.path == '/add_user/' %} active {% endif %}"  href="/add_user/">Добавить пользователя</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link {% if request.path == '/users_list/' %} active {% endif %}" href="/users_list/">Список пользователей</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link {% if request.path == '/send_message/' %} active {% endif %}" href="/send_message/">Отправить сообщение</a>
+  </li>
+</ul>
+</header>

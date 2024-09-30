@@ -1,0 +1,26 @@
+{% extends "bot/base.html" %}
+{% block title %}Отправить сообщение{% endblock%}
+{% block body %}
+    <h1>Отправить сообщение</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% elif success %}
+        <p style="color: green;">{{ success }}</p>
+    {% endif %}
+    <form method="POST" style="max-width: 300px">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="message" class="form-label">Сообщение:</label><br>
+            <textarea id="message" name="message" class="form-control" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="code" class="form-label">Код:</label><br>
+            <input type="text" id="code" name="code" class="form-control"  required>
+        </div>
+        <input type="submit" value="Разослать сообщение" class="btn btn-primary">
+    </form>
+{% endblock %}
+
+
+
+

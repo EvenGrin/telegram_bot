@@ -1,0 +1,12 @@
+{% extends "bot/base.html" %}
+{% block title %}Список пользователей{% endblock%}
+{% block body %}
+    <h1>Список пользователей</h1>
+    <ul>
+        {% for user in users %}
+            <li>{{ user.full_name }} ({{ user.telegram_id }})</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_user' %}">Добавить пользователя</a>
+{% endblock %}
+

@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Tg bot: {% block title %}Главная{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'bot/bootstrap.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'bot/tg.png' %}"/>
+    {% block head %} {% endblock %}
+</head>
+<body class="container">
+    {% include 'bot/header.html' %}
+    {% block body %}{% endblock %}
+</body>
+</html>
